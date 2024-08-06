@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+    
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="dice1" src="" alt="" style="width:100px; height: 100px; ">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="dice2" src="" alt="" style="width:100px; height: 100px;">
+      </div> 
+      <div>
+      
+      
+    </div>
+
+    </div>
+
+    <script>
+      var num=[1,2,3,4,5,6];
+      var len=num.length;
+      var rannum1=Math.floor(len*(Math.random(num)))+1;  
+      var rannum2=Math.floor(len*(Math.random(num)))+1;  
+      
+      var dice1= document.querySelector(".dice1");
+      var dice2= document.querySelector(".dice2"); 
+
+      dice1.src="./images/dice"+rannum1+".png";
+      dice2.src="./images/dice"+rannum2+".png";
+
+      if (rannum1>rannum2)
+      {
+        document.querySelector("h1").innerHTML="Player1 Wins";
+      }
+      else if(rannum1<rannum2)
+      {
+        document.querySelector("h1").innerHTML="Player2 Wins";
+      }
+      else{
+        
+        document.querySelector("h1").innerHTML="Both Wins";
+      }
+    </script>
+  </body>
+
+  <footer>
+    www 🎲 App Brewery 🎲 com
+  </footer>
+</html>
